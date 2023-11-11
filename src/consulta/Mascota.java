@@ -72,6 +72,23 @@ public class Mascota {
     }
     
     
+    @Override
+    public String toString(){
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("Mascota: ").append("\n");
+        sb.append("Especie: ").append(especie).append("\n");
+        sb.append("Raza: ").append(raza).append("\n");
+        sb.append("Nombre: ").append(nombre).append("\n");
+        sb.append("Cliente: ").append(cliente.getNombre()).append("\n");
+        
+        for(Consulta consulta : consultas){
+            sb.append(consulta).append("\n");
+        }
+        return sb.toString();
+    }
+    
     
     
 }

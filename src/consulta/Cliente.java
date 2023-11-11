@@ -18,6 +18,22 @@ public class Cliente extends Persona{
         return mascotas;
     }
     
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("Cliente: ").append("\n");
+        sb.append("Cedula: ").append(getCedula()).append("\n");
+        sb.append("Nombre: ").append(getNombre()).append("\n");
+        sb.append("Apellido: ").append(getApellido()).append("\n");
+        sb.append("Edad: ").append(getEdad()).append("\n");
+        
+        for(Mascota mascota : mascotas){
+            sb.append(mascota).append("\n");
+        }
+        return sb.toString();
+    }
+    
     
 
     
