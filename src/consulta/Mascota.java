@@ -14,12 +14,11 @@ public class Mascota {
     private Cliente cliente;
     private List<Consulta> consultas;
 
-    public Mascota(long idMascota, String especie, String raza, String nombre, Cliente cliente) {
+    public Mascota(long idMascota, String especie, String raza, String nombre) {
         this.idMascota = idMascota;
         this.especie = especie;
         this.raza = raza;
         this.nombre = nombre;
-        this.cliente = cliente;
         this.consultas= new ArrayList<>();
     }
 
@@ -71,6 +70,23 @@ public class Mascota {
         this.consultas = consultas;
     }
     
+    
+    @Override
+    public String toString(){
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("Mascota: ").append("\n");
+        sb.append("Especie: ").append(especie).append("\n");
+        sb.append("Raza: ").append(raza).append("\n");
+        sb.append("Nombre: ").append(nombre).append("\n");
+        sb.append("Cliente: ").append(cliente.getNombre()).append("\n");
+        
+        for(Consulta consulta : consultas){
+            sb.append(consulta).append("\n");
+        }
+        return sb.toString();
+    }
     
     
     

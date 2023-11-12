@@ -19,19 +19,19 @@ public class Consulta {
     private long idConsulta;
     private Veterinario veterinario;
     private Mascota mascota;
-    private String descripción;
+    private String descripcion;
     private Factura factura;
 
-    public Consulta(long idConsulta, String descripción) {
+    public Consulta(long idConsulta, String descripcion) {
         this.fecha = LocalDateTime.now();
         this.idConsulta = idConsulta;
-        this.descripción = descripción;
+        this.descripcion = descripcion;
     }
     
-    public Consulta (int anio, int mes, int dia, int hora, int minuto, long idConsulta, String descripción){
+    public Consulta (int anio, int mes, int dia, int hora, int minuto, long idConsulta, String descripcion){
         this.fecha = LocalDateTime.of(anio, mes, dia, hora, minuto);
         this.idConsulta = idConsulta;
-        this.descripción = descripción;
+        this.descripcion = descripcion;
         
     }
 
@@ -94,15 +94,15 @@ public class Consulta {
     /**
      * @return the descripción
      */
-    public String getDescripción() {
-        return descripción;
+    public String getDescripcion() {
+        return descripcion;
     }
 
     /**
-     * @param descripción the descripción to set
+     * @param descripcion the descripción to set
      */
-    public void setDescripción(String descripción) {
-        this.descripción = descripción;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     /**
@@ -127,5 +127,18 @@ public class Consulta {
         veterinario.getConsultas().add(this);
     }
     
+    @Override
+    public String toString(){
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("Consulta: ").append(getIdConsulta()).append("\n");
+        sb.append("Fecha: ").append(fecha).append("\n");
+        sb.append("Veterinario: ").append(veterinario.getNombre()).append("\n");
+        sb.append("Idmascota: ").append(mascota.getIdMascota()).append("\n");
+        sb.append("Descripción: ").append(descripcion).append("\n");
+        sb.append("Factura: ").append(factura).append("\n");
+        return sb.toString();
+    }
     
 }

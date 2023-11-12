@@ -34,7 +34,35 @@ public class Veterinario extends Empleado{
     
     @Override
     public void calcularSueldo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int contador = 0;
+        
+        for(Consulta consulta : consultas){
+            contador+=1;
+        }
+        
+        setSueldo(getSueldo() + (25000 * contador));
+        System.out.println("El sueldo del Veterinario es: " + getSueldo());
+    }
+    
+    @Override
+    public String toString(){
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("Veterinario: ").append("\n");
+        sb.append("Cedula: ").append(getCedula()).append("\n");
+        sb.append("Nombre: ").append(getNombre()).append("\n");
+        sb.append("Apellido: ").append(getApellido()).append("\n");
+        sb.append("Edad: ").append(getEdad()).append("\n");
+        sb.append("Sueldo: ").append(getSueldo()).append("\n");
+        sb.append("Especialidad: ").append(getEspecialidad()).append("\n");
+        sb.append("Consulta: ").append("\n");
+        
+        for(Consulta consulta : consultas){
+            sb.append(consulta).append("\n");
+        }
+        
+        return sb.toString();
     }
     
     
