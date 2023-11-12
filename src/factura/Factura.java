@@ -44,7 +44,7 @@ public class Factura {
         return detallesFacturas;
     }
     
-    public void aumentarPrecioTotal(double precioDetalle){
+    public void AumentarPrecioTotal(double precioDetalle){
         this.precioTotal += precioDetalle;
     }
     
@@ -59,9 +59,9 @@ public class Factura {
             sb.append(detalle).append("\n");
         }
         sb.append("\n");
-        sb.append("PrecioConsulta: ").append("20000.0").append("\n");
-        sb.append("PrecioTotal: ").append(precioTotal).append("\n");
-        return toString();
+        sb.append("PrecioConsulta: ").append("20000.").append("\n");
+        sb.append("PrecioTotal: ").append(precioTotal);
+        return sb.toString();
     }
         
 }

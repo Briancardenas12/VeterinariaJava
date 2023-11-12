@@ -14,12 +14,11 @@ public class Mascota {
     private Cliente cliente;
     private List<Consulta> consultas;
 
-    public Mascota(long idMascota, String especie, String raza, String nombre, Cliente cliente) {
+    public Mascota(long idMascota, String especie, String raza, String nombre) {
         this.idMascota = idMascota;
         this.especie = especie;
         this.raza = raza;
         this.nombre = nombre;
-        this.cliente = cliente;
         this.consultas= new ArrayList<>();
     }
 

@@ -13,6 +13,11 @@ public class Cliente extends Persona{
         super(cedula, nombre, apellido, edad);
         this.mascotas= new ArrayList<>();
     }
+    
+    public void addMacosta(Mascota mascota){
+        getMascotas().add(mascota);
+        mascota.setCliente(this);
+    }
 
     public List<Mascota> getMascotas() {
         return mascotas;

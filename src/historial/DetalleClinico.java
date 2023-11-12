@@ -66,7 +66,7 @@ public class DetalleClinico {
         sb.append("Consulta: ").append(consulta.getIdConsulta()).append("\n");
         sb.append("Descripcion: ").append(descripcion).append("\n");
         
-        return toString();
+        return sb.toString();
     
     }
             

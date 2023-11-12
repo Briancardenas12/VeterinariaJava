@@ -42,7 +42,7 @@ public class Producto {
         sb.append("Producto: ").append("\n");
         sb.append("Producto: ").append(nombre).append("\n");
         sb.append("Producto: ").append(precioUnitario).append("\n");
-        return toString();
+        return sb.toString();
     }
     
     

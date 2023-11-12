@@ -138,7 +138,7 @@ public class Consulta {
         sb.append("Idmascota: ").append(mascota.getIdMascota()).append("\n");
         sb.append("Descripción: ").append(descripcion).append("\n");
         sb.append("Factura: ").append(factura).append("\n");
-        return toString();
+        return sb.toString();
     }
     
 }
